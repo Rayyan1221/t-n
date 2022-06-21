@@ -1,0 +1,238 @@
+/*navbar CSS starts*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat',sans-serif;
+  color:black;
+
+
+}
+
+nav{
+  background: #FAF9F9;
+  padding: 5px 40px;
+  height:10%;
+
+}
+nav ul{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+nav ul li{
+
+  padding: 15px 0;
+  cursor: pointer;
+  color:black;
+}
+nav ul li.items{
+  position: relative;
+  width: auto;
+  margin: 0 16px;
+  text-align: center;
+  order: 3;
+  color:black;
+}
+nav ul li.items:after{
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 5px;
+  height: 2px;
+  width: 100%;
+  background: #33ffff;
+  color:black;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+nav ul li.items:hover:after{
+  opacity: 1;
+  bottom: 8px;
+}
+nav ul li.logo{
+  flex: 1;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: default;
+  user-select: none;
+  font-family: 'Permanent Marker', cursive;
+  letter-spacing: 0.5vw;
+}
+#tag{
+  flex:1.5;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+}
+nav ul li a{
+  color: black;
+  font-size: 18px;
+  text-decoration: none;
+  transition: .4s;
+}
+nav ul li:hover a{
+  color: cyan;
+}
+nav ul li i{
+  font-size: 23px;
+}
+nav ul li.btn{
+  display: none;
+}
+nav ul li.btn.hide i:before{
+  content: '\f00d';
+}
+@media all and (min-width: 90px){
+  nav{
+    padding: 5px 30px;
+  }
+  nav ul li.items{
+    width: 100%;
+    display: none;
+  }
+  nav ul li.items.show{
+    display: block;
+  }
+  nav ul li.btn{
+    display: block;
+  }
+  nav ul li.items:hover{
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px #33ffff,
+                inset 0 0 10px #66ffff;
+  }
+  nav ul li.items:hover:after{
+    opacity: 0;
+  }
+}
+/* navbar CSS ens */
+
+
+/*features Css starts*/
+.card {
+  background-color: white;
+  margin: auto;
+
+  font-size: 1.5rem;
+  font-family: arial;
+}
+
+
+#head{
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  font-weight: bolder;
+
+}
+.card p{
+  font-family: 'Dancing Script', cursive;
+  margin: 2%;
+}
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 65%;
+  font-size: 1rem;
+  width:20%;
+  font-family: 'M PLUS 1', sans-serif;
+  border-radius: 12px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+.text{
+  margin:10%;
+}
+.text h1{
+  color: black;
+  letter-spacing: 2px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.text ol li{
+  margin: auto;
+  color: black;
+}
+img{
+  width: 100%;
+  height: 100%;
+}
+.container{
+  display: grid;
+  grid-gap: 5%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows:1fr 1fr 1fr;
+  grid-template-areas: "image info" "content content" "quick quick";
+}
+.item1{
+  background-color: #ACEAEA;
+  grid-area: image;
+}
+.item2{
+  background-color: #ACEAEA;
+  grid-area:info;
+}
+.item3{
+  background-color: white;
+grid-area:content;
+}
+
+/*quick access bar*/
+
+.quick{
+  grid-area: quick;
+
+}
+.access{
+  display: grid;
+  background-color: #FFEDD2;
+  grid-gap: 10px;
+  grid-template-areas:"btn1 btn2 btn3 btn4 btn5";
+  width: auto;
+  height:60px;
+  border-radius: 30px;
+}
+
+.btn1{
+  grid-area:btn1;
+  padding:20px 0;
+  margin: auto;
+}
+svg{
+  align-items: center;
+  width: 30px;
+  height:30px;
+}
+.btn1 i{
+text-align: center;
+
+}
+
+.btn2{
+  grid-area:btn2;
+  padding:20px 0;
+  margin: auto;
+}
+.btn3{
+  grid-area:btn3;
+  padding:20px 0;
+  margin: auto;
+
+}
+.btn4{
+  grid-area:btn4;
+  padding:20px 0;
+  margin: auto;
+}
+.btn5{
+  grid-area:btn5;
+  padding:20px 0;
+  margin: auto;
+}
